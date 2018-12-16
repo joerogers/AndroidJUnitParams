@@ -16,9 +16,9 @@
 
 package com.forkingcode.androidjunitparams;
 
-import android.support.test.internal.runner.junit4.statement.RunAfters;
-import android.support.test.internal.runner.junit4.statement.RunBefores;
-import android.support.test.internal.runner.junit4.statement.UiThreadStatement;
+import androidx.test.internal.runner.junit4.statement.RunAfters;
+import androidx.test.internal.runner.junit4.statement.RunBefores;
+import androidx.test.internal.runner.junit4.statement.UiThreadStatement;
 
 import org.junit.After;
 import org.junit.Before;
