@@ -1,6 +1,6 @@
 package com.forkingcode.sample;
 
-import android.support.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 
 import com.forkingcode.androidjunitparams.AndroidJUnitParamsRunner;
 
