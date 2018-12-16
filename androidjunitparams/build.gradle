@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -26,9 +25,9 @@ ext {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support.test:runner:1.0.0"
-    compile "pl.pragmatists:JUnitParams:1.1.0"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support.test:runner:1.0.2"
+    api "pl.pragmatists:JUnitParams:1.1.1"
 }
 
 apply from: '../bintray.gradle'

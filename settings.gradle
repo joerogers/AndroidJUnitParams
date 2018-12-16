@@ -1,1 +1,1 @@
-include ':androidjunitparams'
+include ':androidjunitparams', ':sample'
