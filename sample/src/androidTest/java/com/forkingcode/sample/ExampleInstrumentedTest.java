@@ -36,7 +36,6 @@ public class ExampleInstrumentedTest {
 
     @SuppressWarnings("unused")
     private Object[] evens() {
-        // States that should result in no persistence
         return new Object[]{
                 2,
                 4,
@@ -49,7 +48,6 @@ public class ExampleInstrumentedTest {
 
     @SuppressWarnings("unused")
     private Object[] odds() {
-        // States that should result in no persistence
         return new Object[]{
                 1,
                 3,

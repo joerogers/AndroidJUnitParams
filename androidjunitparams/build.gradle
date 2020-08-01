@@ -1,11 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
     }
@@ -26,7 +27,7 @@ ext {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'androidx.test:runner:1.1.1'
+    api 'androidx.test:runner:1.2.0'
     api "pl.pragmatists:JUnitParams:1.1.1"
 }
 
