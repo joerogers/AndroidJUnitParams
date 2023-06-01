@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    namespace 'com.forkingcode.androidjunitparams'
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 33
     }
     buildTypes {
         release {
@@ -31,4 +29,4 @@ dependencies {
     api "pl.pragmatists:JUnitParams:1.1.1"
 }
 
-apply from: '../bintray.gradle'
+//apply from: '../bintray.gradle'
