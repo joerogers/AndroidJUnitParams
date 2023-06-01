@@ -1,4 +1,4 @@
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.forkingcode.androidjunitparams'
 
@@ -32,8 +32,8 @@ install {
                     }
                 }
                 scm {
-                    connection 'https://github.com/joerogers/AndroidJUnitParams.git'
-                    developerConnection 'https://github.com/joerogers/AndroidJUnitParams.git'
+                    connection 'scm:git:git://github.com/joerogers/AndroidJUnitParams.git'
+                    developerConnection 'scm:git:git://github.com/joerogers/AndroidJUnitParams.git'
                     url 'https://github.com/joerogers/AndroidJUnitParams'
                 }
             }
