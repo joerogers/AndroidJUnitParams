@@ -1,5 +1,11 @@
 package com.forkingcode.sample;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import android.os.Looper;
+
 import androidx.test.annotation.UiThreadTest;
 
 import com.forkingcode.androidjunitparams.AndroidJUnitParamsRunner;
@@ -9,28 +15,36 @@ import org.junit.runner.RunWith;
 
 import junitparams.Parameters;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
 /**
  * Sample test to show using parameterized tests with the UiThreadTest rule.
  */
 @RunWith(AndroidJUnitParamsRunner.class)
 public class ExampleInstrumentedTest {
+
+    @SuppressWarnings("JUnitMalformedDeclaration")  // Test doesn't want parameters
     @Test
     @Parameters(method = "evens")
     @UiThreadTest
     public void testEvens(int value) {
-        int byThree = value * 3;
 
+        // Ensure running on UI thread per UiThreadTest annotation (library validation)
+        assertThat(Looper.myLooper(), is(Looper.getMainLooper()));
+
+        // Sample test checking value is even
+        int byThree = value * 3;
         assertThat(byThree % 2, is(0));
     }
 
+    @SuppressWarnings("JUnitMalformedDeclaration")  // Test doesn't want parameters
     @Test
     @Parameters(method = "odds")
     public void testOdds(int value) {
-        int byThree = value * 3;
 
+        // Ensure not running on UI thread without annotation (library validation)
+        assertThat(Looper.myLooper(), is(nullValue()));
+
+        // Sample test checking value is odd
+        int byThree = value * 3;
         assertThat(byThree % 2, is(1));
     }
 
