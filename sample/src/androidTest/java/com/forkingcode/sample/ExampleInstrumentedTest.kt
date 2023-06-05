@@ -1,75 +1,69 @@
-package com.forkingcode.sample;
+package com.forkingcode.sample
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
-
-import android.os.Looper;
-
-import androidx.test.annotation.UiThreadTest;
-
-import com.forkingcode.androidjunitparams.AndroidJUnitParamsRunner;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import junitparams.Parameters;
+import android.os.Looper
+import androidx.test.annotation.UiThreadTest
+import com.forkingcode.androidjunitparams.AndroidJUnitParamsRunner
+import junitparams.Parameters
+import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.nullValue
+import org.hamcrest.MatcherAssert.assertThat
+import org.junit.Test
+import org.junit.runner.RunWith
 
 /**
  * Sample test to show using parameterized tests with the UiThreadTest rule.
  */
-@RunWith(AndroidJUnitParamsRunner.class)
-public class ExampleInstrumentedTest {
-
-    @SuppressWarnings("JUnitMalformedDeclaration")  // Test doesn't want parameters
+@Suppress("JUnitMalformedDeclaration")
+@RunWith(AndroidJUnitParamsRunner::class)
+class ExampleInstrumentedTest {
+    // Test doesn't want parameters
     @Test
     @Parameters(method = "evens")
     @UiThreadTest
-    public void testEvens(int value) {
+    fun testEvens(value: Int) {
 
         // Ensure running on UI thread per UiThreadTest annotation (library validation)
-        assertThat(Looper.myLooper(), is(Looper.getMainLooper()));
+        assertThat(Looper.myLooper(), `is`(Looper.getMainLooper()))
 
         // Sample test checking value is even
-        int byThree = value * 3;
-        assertThat(byThree % 2, is(0));
+        val byThree = value * 3
+        assertThat(byThree % 2, `is`(0))
     }
 
-    @SuppressWarnings("JUnitMalformedDeclaration")  // Test doesn't want parameters
+    // Test doesn't want parameters
     @Test
     @Parameters(method = "odds")
-    public void testOdds(int value) {
+    fun testOdds(value: Int) {
 
         // Ensure not running on UI thread without annotation (library validation)
-        assertThat(Looper.myLooper(), is(nullValue()));
+        assertThat(Looper.myLooper(), `is`(nullValue()))
 
         // Sample test checking value is odd
-        int byThree = value * 3;
-        assertThat(byThree % 2, is(1));
+        val byThree = value * 3
+        assertThat(byThree % 2, `is`(1))
     }
 
-    @SuppressWarnings("unused")
-    private Object[] evens() {
-        return new Object[]{
-                2,
-                4,
-                6,
-                8,
-                12,
-                14
-        };
+    @Suppress("unused")
+    private fun evens(): Array<Any> {
+        return arrayOf(
+            2,
+            4,
+            6,
+            8,
+            12,
+            14
+        )
     }
 
-    @SuppressWarnings("unused")
-    private Object[] odds() {
-        return new Object[]{
-                1,
-                3,
-                5,
-                7,
-                11,
-                13
-        };
+    @Suppress("unused")
+    private fun odds(): Array<Any> {
+        return arrayOf(
+            1,
+            3,
+            5,
+            7,
+            11,
+            13
+        )
     }
-
 }
