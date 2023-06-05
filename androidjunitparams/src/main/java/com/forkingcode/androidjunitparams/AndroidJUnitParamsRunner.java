@@ -16,6 +16,8 @@
 
 package com.forkingcode.androidjunitparams;
 
+import android.annotation.SuppressLint;
+
 import androidx.test.internal.runner.junit4.statement.RunAfters;
 import androidx.test.internal.runner.junit4.statement.RunBefores;
 import androidx.test.internal.runner.junit4.statement.UiThreadStatement;
@@ -33,10 +35,10 @@ import junitparams.JUnitParamsRunner;
 /**
  * Specialized runner allowing UiThreadTest annotations to be honored for tests using
  * JUnitParams.
- *
  * Code based on AndroidJUnit4ClassRunner. Uses internal runner logic to provide ability
  * to honor UiThreadTest
  */
+@SuppressLint("RestrictedApi")
 public class AndroidJUnitParamsRunner extends JUnitParamsRunner {
 
     public AndroidJUnitParamsRunner(Class<?> klass) throws InitializationError {
@@ -53,13 +55,13 @@ public class AndroidJUnitParamsRunner extends JUnitParamsRunner {
 
     @Override
     protected Statement withBefores(FrameworkMethod method, Object target, Statement statement) {
-        List<FrameworkMethod> befores = getTestClass().getAnnotatedMethods(Before.class);
-        return befores.isEmpty() ? statement : new RunBefores(method, statement, befores, target);
+        List<FrameworkMethod> beforeList = getTestClass().getAnnotatedMethods(Before.class);
+        return beforeList.isEmpty() ? statement : new RunBefores(method, statement, beforeList, target);
     }
 
     @Override
     protected Statement withAfters(FrameworkMethod method, Object target, Statement statement) {
-        List<FrameworkMethod> afters = getTestClass().getAnnotatedMethods(After.class);
-        return afters.isEmpty() ? statement : new RunAfters(method, statement, afters, target);
+        List<FrameworkMethod> afterList = getTestClass().getAnnotatedMethods(After.class);
+        return afterList.isEmpty() ? statement : new RunAfters(method, statement, afterList, target);
     }
 }
