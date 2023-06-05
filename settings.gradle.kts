@@ -12,5 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "AndroidJUnitParams"
-include ':androidjunitparams', ':sample'
+include(":androidjunitparams")
+include(":sample")
