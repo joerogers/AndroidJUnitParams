@@ -44,7 +44,7 @@ val libraryName = "androidjunitparams"
 val libraryDescription = "Android extensions to the JUnitParams library"
 val libraryVersion = "1.2.0"
 
-val mavenUserName = project.providers.gradleProperty("mavenUserId").getOrElse("")
+val mavenUsername = project.providers.gradleProperty("mavenUsername").getOrElse("")
 val mavenPassword =  project.providers.gradleProperty("mavenPassword").getOrElse("")
 
 afterEvaluate {
@@ -100,7 +100,7 @@ afterEvaluate {
                     val snapshotsRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
                     url = if (libraryVersion.endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
                     credentials {
-                        username = mavenUserName
+                        username = mavenUsername
                         password = mavenPassword
                     }
                 }
