@@ -2,6 +2,7 @@ package com.forkingcode.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.forkingcode.androidjunitparams.sample.R
 
 class MainActivity : AppCompatActivity() {
 
