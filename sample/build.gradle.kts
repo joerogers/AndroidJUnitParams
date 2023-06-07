@@ -4,9 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.forkingcode.sample"
+    namespace = "com.forkingcode.androidjunitparams.sample"
     compileSdk = 33
-    buildToolsVersion = "33.0.2"
 
     defaultConfig {
         applicationId = "com.forkingcode.androidjunitparams.sample"
