@@ -48,6 +48,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("pl.pragmatists:JUnitParams:1.1.1")
 
-    //androidTestImplementation project(":androidjunitparams")
-    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.1.0")
+    //androidTestImplementation(project(":androidjunitparams"))
+    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.2.0")
 }
