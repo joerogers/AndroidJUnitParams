@@ -1,10 +1,8 @@
 # AndroidJUnitParams
 Android extension to JUnitParams providing an enhanced runner that honors annotations such as UiThreadTest
 
-Download the version of the library that matches the espresso version you are using:
-
-| AndroidJUnitParams Library                                                                                                                                                                                                                                                           |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Latest version                                                                                                                                                                                                                             |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [ ![Download](https://maven-badges.herokuapp.com/maven-central/com.forkingcode.androidjunitparams/androidjunitparams/badge.svg?subject=androidjunitparams) ](https://maven-badges.herokuapp.com/maven-central/com.forkingcode.androidjunitparams/androidjunitparams) |
 
 Usage
