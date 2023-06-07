@@ -31,6 +31,14 @@ android {
     }
 }
 
+dependencies {
+    //implementation(fileTree(dir: "libs", include: ["*.jar"]))
+    api("androidx.test:runner:1.5.0")
+    api("pl.pragmatists:JUnitParams:1.1.1")
+}
+
+// Publishing info
+
 val libraryGroupId = "com.forkingcode.androidjunitparams"
 val libraryName = "androidjunitparams"
 val libraryDescription = "Android extensions to the JUnitParams library"
@@ -38,12 +46,6 @@ val libraryVersion = "1.2.0"
 
 val mavenUserName = project.providers.gradleProperty("mavenUserId").getOrElse("")
 val mavenPassword =  project.providers.gradleProperty("mavenPassword").getOrElse("")
-
-dependencies {
-    //implementation(fileTree(dir: "libs", include: ["*.jar"]))
-    api("androidx.test:runner:1.5.0")
-    api("pl.pragmatists:JUnitParams:1.1.1")
-}
 
 afterEvaluate {
     publishing {
@@ -94,10 +96,9 @@ afterEvaluate {
 
             repositories {
                 maven {
-                    // change URLs to point to your repos, e.g. http://my.org/repo
                     val releasesRepoUrl = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
                     val snapshotsRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-                    url = if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
+                    url = if (libraryVersion.endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
                     credentials {
                         username = mavenUserName
                         password = mavenPassword

@@ -3,10 +3,9 @@ Android extension to JUnitParams providing an enhanced runner that honors annota
 
 Download the version of the library that matches the espresso version you are using:
 
-| Test runner version | AndroidJUnitParams Library |
-|---|---|
-| 1.1.0+ (androidx) | [ ![Download](https://api.bintray.com/packages/joerogers/maven/androidjunitparams/images/download.svg) ](https://bintray.com/joerogers/maven/androidjunitparams/_latestVersion) |
-| 1.0.0+ | [ ![Download](https://api.bintray.com/packages/joerogers/maven/androidjunitparams/images/download.svg?version=1.0.1)](https://bintray.com/joerogers/maven/androidjunitparams/1.0.1/link)
+| AndroidJUnitParams Library                                                                                                                                                                                                                                                           |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ ![Download](https://maven-badges.herokuapp.com/maven-central/com.forkingcode.androidjunitparams/androidjunitparams/badge.svg?subject=androidjunitparams) ](https://maven-badges.herokuapp.com/maven-central/com.forkingcode.androidjunitparams/androidjunitparams) |
 
 Usage
 -----
