@@ -24,6 +24,8 @@ public class ExampleInstrumentedTest {
     public void testEvens(int value) {
 ```
 
+3. Run tests at the class level. This allows the parameterized tests to run correctly as essentially the there are multiple tests per individual test.
+
 License
 -------
 
