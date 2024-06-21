@@ -13,7 +13,6 @@ import org.junit.runner.RunWith
 /**
  * Sample test to show using parameterized tests with the UiThreadTest rule.
  */
-@Suppress("JUnitMalformedDeclaration")
 @RunWith(AndroidJUnitParamsRunner::class)
 class ExampleInstrumentedTest {
     // Test doesn't want parameters
