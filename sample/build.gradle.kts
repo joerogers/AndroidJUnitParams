@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.forkingcode.androidjunitparams.sample"
+    namespace = "com.forkingcode.sample"
     compileSdk = 34
 
     defaultConfig {
@@ -42,11 +42,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test:rules:1.5.0")
-    androidTestImplementation("androidx.test:runner:1.5.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test:rules:1.6.1")
+    androidTestImplementation("androidx.test:runner:1.6.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("pl.pragmatists:JUnitParams:1.1.1")
 
     //androidTestImplementation(project(":androidjunitparams"))
-    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.2.0")
+    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.3.0")
 }
