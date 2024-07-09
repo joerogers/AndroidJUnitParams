@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+## Version 1.3.0
+
+_2024-07-09_
+
+* Upgrade to Android test runner `1.6.1`.
+* Min sdk now API 19
+* Compile sdk is 34
+
 ## Version 1.2.0
 
 _2023-06-07_
