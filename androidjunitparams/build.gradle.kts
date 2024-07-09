@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "com.forkingcode.androidjunitparams"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = 16
+        minSdk = 19
     }
     buildTypes {
         release {
@@ -33,7 +33,7 @@ android {
 
 dependencies {
     //implementation(fileTree(dir: "libs", include: ["*.jar"]))
-    api("androidx.test:runner:1.5.0")
+    api("androidx.test:runner:1.6.1")
     api("pl.pragmatists:JUnitParams:1.1.1")
 }
 
@@ -42,7 +42,7 @@ dependencies {
 val libraryGroupId = "com.forkingcode.androidjunitparams"
 val libraryName = "androidjunitparams"
 val libraryDescription = "Android extensions to the JUnitParams library"
-val libraryVersion = "1.2.0"
+val libraryVersion = "1.3.0"
 
 val mavenUsername = project.providers.gradleProperty("mavenUsername").getOrElse("")
 val mavenPassword =  project.providers.gradleProperty("mavenPassword").getOrElse("")
