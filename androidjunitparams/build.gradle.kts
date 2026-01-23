@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "com.forkingcode.androidjunitparams"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
-        minSdk = 19
+        minSdk = 21
     }
     buildTypes {
         release {
@@ -19,8 +19,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     publishing {
         singleVariant("release") {
@@ -33,7 +33,7 @@ android {
 
 dependencies {
     //implementation(fileTree(dir: "libs", include: ["*.jar"]))
-    api("androidx.test:runner:1.6.1")
+    api("androidx.test:runner:1.7.0")
     api("pl.pragmatists:JUnitParams:1.1.1")
 }
 
