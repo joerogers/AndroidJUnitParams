@@ -53,5 +53,5 @@ dependencies {
     androidTestImplementation("pl.pragmatists:JUnitParams:1.1.1")
 
     //androidTestImplementation(project(":androidjunitparams"))
-    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.3.0")
+    androidTestImplementation("com.forkingcode.androidjunitparams:androidjunitparams:1.4.0")
 }
