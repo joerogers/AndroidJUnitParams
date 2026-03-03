@@ -53,7 +53,7 @@ dependencies {
     androidTestImplementation("pl.pragmatists:JUnitParams:1.1.1")
 
     // Kotlin
-    val kotlinBom = platform("org.jetbrains.kotlin:kotlin-bom:2.3.0")
+    val kotlinBom = platform("org.jetbrains.kotlin:kotlin-bom:2.3.10")
     implementation(kotlinBom)
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     androidTestImplementation(kotlinBom)
