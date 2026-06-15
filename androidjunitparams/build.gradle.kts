@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.forkingcode.androidjunitparams"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 21
